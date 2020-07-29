@@ -1,11 +1,12 @@
 1. flow
 2. classes
-    2a. class relationships
+    1. class relationships
 
-- user is asked for how they would like to search for a card
-- user sees information for selected card 
-- user selects specific detail
-- user sees card details
+- welcome user, prompt to either select a list, or tell exit
+    1. pokemon cards
+- user sees a list of randomly generated cards
+- user selects card by name to print details of card
+- user selects exit, goodbye exit program
 - 
 
 Classes
