@@ -9,7 +9,7 @@
 - user selects exit, goodbye exit program
 - 
 
-Classes
-- Card (knows and stores cards)
+3 Classes:
+- Card (knows, stores, and creates cards)
 - CLI (interacts with the user)
-- API (Goes out and gets info for cards)
+- API (Goes out and gets info for cards:instantiates objects)
