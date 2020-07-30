@@ -11,7 +11,9 @@ class PokemonCards::CLI
         
         Or type 'exit' at any time to leave the program. Type 'menu' to see this menu again.
                 MENU
+    
         menu
+       
         # binding.pry
     end
 
