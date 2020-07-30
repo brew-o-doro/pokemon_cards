@@ -4,6 +4,8 @@ require 'httparty'
 require 'colorize'
 require 'rest-client'
 require 'json'
+require 'http/net'
+require 'uri'
 
 # classes
 require_relative "./pokemon_cards/version"

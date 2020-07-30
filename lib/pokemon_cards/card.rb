@@ -1,10 +1,13 @@
 class Card
 
-    attr_reader :name, :types, :subtypes, :rarity, :attack_name, :attack_damage, :attack_cost, :attack_test, :weaknesses
+    # attr_reader :name, :types, :subtypes, :rarity, :attack_name, :attack_damage, :attack_cost, :attack_test, :weaknesses
+    attr_reader :name, :types, :subtype, :rarity, :attack, :contains
 
     @@all = []
     def initialize(attr_hash)
-        attr_hash.each{|k, v| self.send("#{k}=", v) if self.respond_to?("#{k}=")}
+        attr_hash.each do |k, v| 
+            self.send("#{k}=", v) if self.respond_to?("#{k}=")
+        end
         save
     end
 
@@ -17,7 +20,7 @@ class Card
     end
 
     def self.find_by_name(name)
-        self.all.select{|card| card.name.downcase == name.downcase}
+        @@all.find{|card| card.name.downcase == name.downcase}
     end
 
 
