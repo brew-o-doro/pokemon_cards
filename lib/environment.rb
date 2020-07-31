@@ -4,7 +4,7 @@ require 'httparty'
 require 'colorize'
 require 'rest-client'
 require 'json'
-require 'http/net'
+require 'net/http'
 require 'uri'
 
 # classes
