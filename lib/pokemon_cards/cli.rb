@@ -3,7 +3,7 @@ class PokemonCards::CLI
     def call
         system("clear")
         @user_input = nil
-        @api = API.new
+        @api = API.fetch_data
         welcome
         menu
         until @user_input == "exit"
@@ -11,7 +11,7 @@ class PokemonCards::CLI
         end
          goodbye
         # menu
-       
+
         # binding.pry
     end
 
@@ -28,9 +28,9 @@ class PokemonCards::CLI
         puts ""
         puts "2. Search by card types"
         puts "Or type 'exit' at any time to leave the program."
-    
+
         @user_input = gets.chomp.downcase
-        
+
         if @user_input == "1"
             # gets cards by name
             # card_list_sorted_by_name
@@ -39,7 +39,7 @@ class PokemonCards::CLI
             card_by_type
         elsif @user_input == "exit"
             # goodbye
-        else 
+        else
             invalid_entry
         end
     end
@@ -60,7 +60,7 @@ class PokemonCards::CLI
     # end
 
     def card_selector(card)
-       #go over my card array, find || detect to find the selected card 
+       #go over my card array, find || detect to find the selected card
        puts "#{card}"
     end
 
@@ -84,7 +84,7 @@ class PokemonCards::CLI
     def goodbye
         puts "Farewell, may the cards be ever in your favor!"
     end
-    
+
 end
 
 
@@ -108,5 +108,3 @@ end
 # Or type 'exit' at any time to leave the program. Type 'menu' to see this menu again.
 #         MENU
     # end
-
-    

@@ -1,29 +1,22 @@
 class Card
 
     # attr_reader :name, :types, :subtypes, :rarity, :attack_name, :attack_damage, :attack_cost, :attack_test, :weaknesses
-    attr_reader :name, :types, :subtype, :rarity, :attack, :contains
+    attr_accessor :name, :types, :subtype, :rarity, :attack, :contains
 
     @@all = []
-    # def initialize(attr_hash)
-    #     attr_hash.each do |k, v| 
-    #         self.send("#{k}=", v) if self.respond_to?("#{k}=")
-    #     end
-    #     # @name = card_data["name"]
-    #     # @types = card_data["types"]
-    #     # @rarity = card_data["rarity"]
-    #     # @attack = card_data["attack"]
-    #     save
-    #     # binding.pry
-    # end
-
-    def initlializt(attrs)
-        if attrs
-            attrs.each do |k, v|
-                self.send("#{k}=", v)
-            end
+    def initialize(attr_hash)
+        attr_hash.each do |k, v|
+            self.send("#{k}=", v) if self.respond_to?("#{k}=")
         end
+        # @name = card_data["name"]
+        # @types = card_data["types"]
+        # @rarity = card_data["rarity"]
+        # @attack = card_data["attack"]
+        save
+        # binding.pry
     end
-        
+
+
 
     def save
         @@all << self
@@ -38,7 +31,7 @@ class Card
     end
 
     def all_uniq
-        @@all.all.uniq 
+        @@all.all.uniq
     end
 
 end
