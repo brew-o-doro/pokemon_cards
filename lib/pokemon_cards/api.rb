@@ -1,6 +1,7 @@
 class API
     include HTTParty
     BASE_URI = 'https://api.pokemontcg.io/v1/cards'
+    default_params  page_size: 10
 
     def self.fetch_data
         response = HTTParty.get(BASE_URI)
